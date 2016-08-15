@@ -11,9 +11,9 @@ function extractName(str){
 	
 var csvs = {};
 
-fs.readdirSync('../csvs/').forEach(function(file){
+fs.readdirSync(__dirname+'/../csvs/').forEach(function(file){
 	var sheet = {};
-	var rows = fs.readFileSync('../csvs/'+file,"utf-8").split("\r\n");
+	var rows = fs.readFileSync(__dirname+'/../csvs/'+file,"utf-8").split("\r\n");
 	
 	var fieldNames = rows.shift().split(",");
 
